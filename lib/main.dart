@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hello World Demo Application',
+      title: 'Container',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -19,12 +19,23 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home Page"),
-      ),
-      body: Center(
-        child: Text('Hello World'),
-      ),
-    );
-  }
-}
+      backgroundColor: Colors.amberAccent,
+        appBar: AppBar(
+          backgroundColor: Colors.purpleAccent,
+            title: Text("Home Page"),
+            centerTitle: true,
+          ),
+          body: Center(
+            child:
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.white,
+              child: Center(
+                child: Text('Hello World'),
+              ),
+            )
+          ),
+        );
+       }
+      }
