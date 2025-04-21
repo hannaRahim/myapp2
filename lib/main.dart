@@ -25,17 +25,12 @@ class MyHomePage extends StatelessWidget {
             title: Text("Home Page"),
             centerTitle: true,
           ),
-          body: Center(
-            child:
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.white,
-              child: Center(
+          body:Container(
+                width: 200,
+                height: 200,
+                color: Colors.white,
                 child: Text('Hello World'),
               ),
-            )
-          ),
-        );
-       }
-      }
+    );
+  }
+}
