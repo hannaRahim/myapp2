@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Container',
+      title: 'ElevatedButton',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -25,12 +25,13 @@ class MyHomePage extends StatelessWidget {
             title: Text("Home Page"),
             centerTitle: true,
           ),
-          body:Container(
-                width: 200,
-                height: 200,
-                color: Colors.white,
-                child: Text('Hello World'),
-              ),
+          body: Center(
+            child:
+              ElevatedButton(
+                onPressed: (){},
+                child: Text("Click Here"),
+              )
+          ,)
     );
   }
 }
