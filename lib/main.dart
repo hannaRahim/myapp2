@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AssetImage',
+      title: 'NetworkImage',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -28,9 +28,9 @@ class MyHomePage extends StatelessWidget {
           body: Center(
             child:
               Image(
-                image: AssetImage('assets/snow flake.png'),
+                image:NetworkImage('https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI'),
               )
-          ,)
+          ,),
     );
   }
 }
