@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ElevatedButton',
+      title: 'Icon',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -19,18 +19,15 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amberAccent,
+      backgroundColor: const Color.fromARGB(144, 64, 198, 255),
         appBar: AppBar(
-          backgroundColor: Colors.purpleAccent,
+          backgroundColor: const Color.fromARGB(180, 223, 64, 251),
             title: Text("Home Page"),
             centerTitle: true,
           ),
           body: Center(
             child:
-              ElevatedButton(
-                onPressed: (){},
-                child: Text("Click Here"),
-              )
+              Icon(Icons.telegram_outlined,size:200,color:Colors.black,)
           ,)
     );
   }
