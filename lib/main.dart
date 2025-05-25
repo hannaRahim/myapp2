@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NetworkImage',
+      title: 'Basic Widger',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -19,18 +19,100 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:const Color.fromARGB(255, 9, 15, 197),
+      backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(180, 64, 189, 251),
             title: Text("Home Page"),
             centerTitle: true,
           ),
-          body: Center(
-            child:
-              Image(
-                image:NetworkImage('https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI'),
+        body: ListView(
+          shrinkWrap: true,
+          padding: const EdgeInsets.fromLTRB(2.0, 0.0, 2.0, 0.0),
+          children: <Widget>[
+            // menu 1: burger
+            Container(
+              padding: EdgeInsets.all(2),
+              height: 120,
+              child: Card(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image.asset("assets/menu1.jpg", width: 100),
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start, // optional: for better text alignment
+                          children: [
+                            Text("Burger daging"),
+                            Text("Juicy beef patty on a bun"),
+                            Text("RM9.60"),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
               )
-          ,),
-    );
+            ),
+            // menu 2: spaghetti
+            Container(
+              padding: EdgeInsets.all(2),
+              height: 120,
+              child: Card(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image.asset("assets/menu2.jpg", width: 100),
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Spaghetti Carbonara"),
+                            Text("Creamy pasta with cheese and chicken"),
+                            Text("RM12.00"),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // menu 3: Fries
+            Container(
+              padding: EdgeInsets.all(2),
+              height: 120,
+              child: Card(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image.asset("assets/menu3.jpg", width: 100),
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Fries"),
+                            Text("Crispy golden french fries"),
+                            Text("RM4.50"),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            ],
+          ),           
+        );
   }
 }
